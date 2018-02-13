@@ -19,12 +19,15 @@ namespace GreenvilleRevenueGUI
 
         private void revenueButton_Click(object sender, EventArgs e)
         {
+            //Entry Fee variable
            int FEE = 25;
-
+            //Yearly conteestant Variables    
             int contestantsThisYear = Convert.ToInt32(thisYearTextBox.Text);
             int contestantsLastYear = Convert.ToInt32(lastYearTextBox.Text);
+            //Revenue Calcs and string format
             int expectedRevenue = contestantsThisYear * FEE;
             revenueOutputLabel.Text = expectedRevenue.ToString("C");
+            //If else if structure for Yearly contestant comparisson.
             if (contestantsThisYear > (contestantsLastYear * 2))
             {
                 contestantsOutputLabel.Text = "The competition is more than twice as big this year! ";
